@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { RouterModule, Routes} from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { HttpClient, HttpClientModule} from '@angular/common/http';
 
 const routes: Routes = [
   {path: 'accueil', component: AccueilComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
